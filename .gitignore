@@ -16,6 +16,7 @@ sitebellib.ini
 #directories to ignore
 .idea/
 /temp
+/holderjs
 /static/SQLs/
 migrations/
 /node_modules
