@@ -1,0 +1,43 @@
+/* author = taksenov@gmail.com */
+
+/* MainSettings */
+@import "mixins";
+@import "fonts";
+
+@container-width : 1000px;
+@container-heigth: 650px;
+
+.wrapper {
+    position: relative;
+    min-height: @container-heigth + 20px;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+    min-width: @container-width + 10px;
+
+}
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 0;
+        left: 0;
+        list-style: none outside none;
+    }
+}
+
+body{
+    background: url("../../static/img/common/bg.png") #e5e5e5;
+}
+/* запрет изменения размера textarea */
+textarea {
+	resize: none;
+}
+/* ------------------------------------------- */
+
+
+
+
+
+
+
