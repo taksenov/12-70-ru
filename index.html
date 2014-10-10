@@ -13,6 +13,9 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- Stylesheets -->
     <link href="dev/css/vendors/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="dev/css/vendors/whhg.css">      <!-- http://www.webhostinghub.com/glyphs/ -->
+    <link href="dev/css/vendors/jquery-ui.css" rel="stylesheet">                 <!-- JQuery Ui -->
+
 <!--    <link rel="stylesheet" href="dev/css/vendors/normalize.css">-->
     <link href="dev/css/vendors/sticky-footer-navbar.css" rel="stylesheet">
 
@@ -33,156 +36,308 @@
     <![endif]-->
 
     <!-- SiteContent Here -->
+    <!-- Wrapper -- >
+    <div class="wrapper">
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default" role="navigation">
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-        </div>
-    </div>
+            <div class="transNavbar"></div>
 
-    <!-- Begin page content -->
-    <div class="container">
-<!--      <ul>
-          <li>-->
+            <div class="container">
+
                 <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
+                    <div class="col-md-4">
+                        <div class="caption">
+                                <div class="col-xs-6 col-sm-6 caption__email">
+                                    <p>
+                                         <i class="icon-emailalt"></i> <a href="mailto:zakaz@12-70.ru"><b>zakaz@12-70.ru</b></a>
+                                    </p>
+                                </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
+                    <div class="col-md-4 col-md-4-logo">
+                        <img src="static/img/common/logoUp.png" class="img-center">
                     </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <div class="col-md-4">
+                        <div class="caption">
+                            <div class="row navbar__cart_margin">
+
+<!--                                <div class="col-xs-offset-6 col-sm-offset-6 caption__cart_empty">
+                                    <p>
+                                         <i class="icon-shopping-cart"></i> Ваша корзина пуста
+                                    </p>
+                                </div>-->
+                                <div class="col-xs-6 col-sm-6 col-xs-offset__full-6 col-sm-offset__full-6 caption__cart_full">
+                                    <p>
+                                         <i class="icon-shopping-cart"></i> <b>2</b> товара на <b>1000</b> <i class="icon-rouble"></i>
+                                    </p>
+                                    <div class="navbar__orderbutton">
+                                        <p>Оформить заказ</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/198x198" alt="..." class="img-rounded">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                            </div>
+
+
                         </div>
                     </div>
                 </div>
-<!--          </li>
-          <li>-->
 
-<!--          </li>
-      </ul>-->
+            </div>
+        </div>
+        <!-- Fixed navbar -->
+
+        <!-- jumbotron -->
+        <div class="container">
+            <div class="jumbotron">
+
+                <div class="transJumbotron"></div>
+
+                <h3>ПРОДАЖА КОМПЛЕКТУЮЩИХ ДЛЯ СНАРЯЖЕНИЯ ОХОТНИЧЬИХ ПАТРОНОВ КАЛИБРА <font color="#00778c">12/70</font></h3>
+                <p>
+                    <i class="icon-shopping-cart"></i>
+                    This is a template for a simple marketing or informational website.
+                    It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+                </p>
+
+
+            </div>
+        </div>
+        <!-- jumbotron -->
+
+        <!-- stok caption -->
+        <div class="stokContainer">
+                <div class="stokJumbotron">
+                    <h3>Наши товары</h3>
+                </div>
+        </div>
+        <!-- stok caption -->
+
+        <!-- stok -->
+        <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/002.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>гильза красная NRG</h3>
+                                    <p>100 шт - 500 <i class="icon-rouble"></i></p>
+
+                                    <p>
+                                        Количество:
+                                        <input id="spinner1">
+                                        <a  class="btn btn__stok" role="button" id="setvalue2"><i class="icon-plus-sign"></i></a>
+                                        <a  class="btn btn__stok" role="button" id="setvalue3"><i class="icon-minus-sign"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/002.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>гильза красная NRG</h3>
+                                    <p>100 шт - 500 <i class="icon-rouble"></i></p>
+
+                                    <p>
+                                        КОЛИЧЕСТВО:
+                                        <input id="spinner2">
+                                        <a  class="btn btn__stok" role="button" id="setvalue4"><i class="icon-plus-sign"></i></a>
+                                        <a  class="btn btn__stok" role="button" id="setvalue5"><i class="icon-minus-sign"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/003.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>микс из гильз</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/004.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/005.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/006.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <!-- stok -->
+
+        <!-- accordion (help for site) -->
+        <div class="accordionContainer">
+
+            <div class="transAccordion"></div>
+
+            <div class="container accordion__position">
+                <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                              Collapsible Group Item #1
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                              Collapsible Group Item #2
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                              Collapsible Group Item #3
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, incidunt ipsam natus nesciunt perspiciatis sed? Ad alias architecto atque autem debitis dicta dignissimos dolor doloremque dolores eaque, enim est exercitationem facere id, iste iure modi mollitia nam necessitatibus neque nesciunt nobis nulla obcaecati odit optio perferendis perspiciatis porro possimus quaerat quam quia quo rem similique tempore tenetur voluptatem voluptates? Error incidunt labore rem totam! Dolore iste possimus quae sed? Aspernatur excepturi laudantium provident sint voluptatibus! A, alias aperiam blanditiis corporis, dolore, doloribus illo libero magnam maxime mollitia nesciunt non obcaecati possimus praesentium quae quisquam repellendus saepe! Accusamus aliquid consequatur consequuntur cum cumque doloremque ea esse excepturi ipsa labore natus obcaecati optio quis quisquam quo sapiente, tempora. Aperiam autem consequuntur dicta eaque earum esse excepturi explicabo illum impedit iste magnam, magni nam necessitatibus perferendis porro quaerat quam recusandae rerum tenetur voluptate. Consequuntur deleniti enim itaque libero nihil placeat possimus quis similique veritatis? Adipisci aliquam aliquid, eligendi nisi quaerat quibusdam reprehenderit vel! Alias doloribus laboriosam magni nostrum, nulla repellendus sequi. Aperiam asperiores assumenda atque autem delectus dignissimos distinctio eos error, esse ex excepturi fuga illo labore necessitatibus nisi nulla omnis porro possimus qui quia sapiente soluta ullam vel veritatis voluptatibus? A aliquam delectus dolore, eaque impedit minus nemo nobis ratione repellat voluptates? Ad assumenda deleniti dolores eligendi eveniet, facere molestias nisi nulla perferendis, possimus, quaerat quisquam unde voluptate. A eum laborum officia, possimus qui sapiente tenetur totam vel veniam vitae? Dolorem iusto nam repellat soluta temporibus ullam voluptas! Consectetur distinctio error odio porro quaerat quibusdam sequi temporibus tenetur ut vitae. Ab animi aperiam, autem delectus dolore earum enim eos exercitationem ipsam ipsum itaque minima nisi nostrum officiis quibusdam ratione repellat rerum similique temporibus velit vitae voluptas voluptatibus. Dolore, doloribus ducimus facilis id iusto magni non quam quasi quidem, ratione, soluta ullam! Ad amet asperiores, aut cumque ea eius eligendi est eveniet facilis fugiat modi necessitatibus nihil numquam obcaecati officiis placeat quaerat saepe similique sunt voluptatum? Laudantium modi molestias quisquam recusandae repellendus soluta vero voluptatum. Aliquam asperiores delectus dolore explicabo modi odit quos unde voluptatum! Alias animi deleniti error est hic iste minus optio quaerat quasi ut! Ad alias aliquid animi aspernatur consequatur dolor dolores earum esse est eveniet facere fuga id ipsam iusto magni maxime modi, nobis nulla obcaecati quam quas rem sint suscipit temporibus veritatis vitae voluptates. Consequatur, explicabo ipsa iste quas saepe vitae voluptas? Debitis dolore recusandae tempore voluptatum? Dicta dolore ea eius exercitationem hic illo impedit maxime placeat quasi, repudiandae sed vero! Accusantium consectetur corporis cupiditate dolore dolorem dolores exercitationem laudantium modi nesciunt, nobis, non odit officia praesentium quae quas quis repellat voluptate voluptates. Adipisci assumenda fugit in ipsam necessitatibus placeat quisquam saepe soluta. Accusantium atque blanditiis corporis cupiditate doloremque esse incidunt ipsum iusto labore maiores maxime minima nobis, obcaecati odio quibusdam quisquam rem repellat repellendus sint tempora ullam, velit vero vitae. A beatae consequatur culpa error est fugit libero nihil, officiis omnis porro provident quidem ratione repudiandae sed veritatis? Consectetur itaque nemo nisi odio perspiciatis, sequi ullam ut.
+
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- accordion (help for site) -->
+
+        <!-- Footer -->
+        <div class="footer">
+
+          <div class="transFooter"></div>
+
+          <div class="container">
+            <div class="footer__left">
+                <p>
+                    Интернет-магазин по продаже комплектующих для снаряжения охотничьих патронов калибра <font color="#00778c">12/70</font>.
+                    <br/>
+                    Продаем качественные стрелянные гильзы, новые пластиковые пыжи и самую прекрасную дробь в мире.
+                    <br/>
+                    <a href="http://12-70.ru"><b>12-70.ru</b></a> | <a href="http://patron12.ru"><b>patron12.ru</b></a> | <a href="http://патрон12.рф"><b>патрон12.рф</b></a>
+                </p>
+            </div>
+            <div class="footer__center"><img src="static/img/common/logoFooter.png" class="img-center"></div>
+            <div class="footer__right">
+                <p>
+                    <i class="icon-emailalt"></i> <a href="mailto:zakaz@12-70.ru"><b>zakaz@12-70.ru</b></a>
+                </p>
+
+            </div>
+
+<!--            <p class="text-muted">Place sticky footer content here.</p>-->
+          </div>
+        </div>
+        <!-- Footer -->
+
     </div>
-
-    <div class="container">
-        <p class="text-muted">Place sticky footer content here.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deleniti eos fugit nihil officiis rem. A ab adipisci atque consequatur corporis cupiditate debitis doloribus ea, earum, est eveniet, facilis fugiat harum hic ipsam labore molestiae nisi nostrum porro soluta totam ut vel vero. Atque ducimus et id iste nesciunt perferendis quisquam sapiente veniam voluptatibus! Culpa delectus enim in nemo odio placeat quam repudiandae voluptas? Adipisci aut deserunt, eius esse explicabo molestiae mollitia neque nesciunt nostrum, omnis perspiciatis quis quos ratione sequi tenetur ullam unde veniam! Alias aut dicta, doloremque eius enim ipsum nesciunt officiis possimus repellat voluptatum. Eum explicabo nam nihil non obcaecati porro quidem totam vero. At aut blanditiis, culpa cumque deserunt, doloremque earum eligendi error et, facilis inventore laboriosam numquam repellendus rerum sint unde voluptate! Accusamus ad alias animi assumenda beatae dicta dignissimos earum eius eum expedita facilis illo, incidunt iste iure, magnam magni maiores maxime minus modi natus nihil odio praesentium quam qui rem rerum totam ut vel vitae, voluptatum. A aperiam at, corporis eum fuga fugit laborum magnam molestiae non numquam sint totam? Autem, commodi consequatur culpa deleniti doloremque error modi nam pariatur quam quas, quidem quos, soluta suscipit? Ab accusamus alias aliquam amet asperiores at aut corporis culpa deserunt dignissimos dolorem doloremque doloribus dolorum fuga illo illum in necessitatibus nemo neque placeat quasi qui quod repellendus, reprehenderit saepe sapiente sequi sit temporibus tenetur totam. Amet commodi culpa ex, minima odit optio tempora! Ad corporis eligendi esse nesciunt omnis perferendis possimus repudiandae sint unde, voluptas. Amet asperiores consequuntur cumque dicta dolore dolorem enim explicabo illo ipsum nam nemo, officiis omnis, quis sit tenetur! Deserunt doloribus neque nobis numquam officia provident sequi unde ut! Dolorem et ex nisi! Adipisci aspernatur consequatur cumque debitis distinctio earum eligendi eos ipsa laudantium molestiae molestias mollitia nostrum, pariatur porro, quis repudiandae, saepe sunt suscipit voluptas voluptatibus. A aliquid animi asperiores culpa cupiditate delectus dolor dolore dolorem, doloremque eligendi error esse excepturi exercitationem expedita fuga fugiat hic, illum ipsa labore laborum minima mollitia officiis quaerat quas recusandae reprehenderit repudiandae sit suscipit tenetur voluptate! Doloremque doloribus error hic minus odio repellendus sed suscipit veritatis. Accusantium eaque hic mollitia quam. Autem commodi cupiditate dolorum ea expedita nihil omnis voluptate. Adipisci aliquid aperiam architecto beatae commodi cum dolorem et iure iusto laudantium maiores, minima natus numquam qui reiciendis, velit voluptas voluptatibus. Alias amet aperiam aspernatur at atque consectetur culpa debitis doloribus dolorum eius enim eos est excepturi expedita fugiat fugit laudantium libero molestiae molestias nisi numquam odio optio perferendis praesentium quo rem, repellat rerum sequi tempora veritatis. Adipisci, aspernatur beatae commodi cupiditate debitis delectus eaque est illo nam optio sapiente similique, sint sunt suscipit tempora velit voluptatum. Accusamus adipisci expedita facilis fugiat illum molestias nobis nulla. Aliquam aliquid aspernatur consectetur consequatur deleniti dicta ducimus error ex explicabo fuga, illo iste magnam nam nesciunt quae quasi quidem quod recusandae sint sit sunt suscipit temporibus unde vitae voluptatum? Adipisci animi at aut culpa, deserunt eligendi esse est eum fugiat illum ipsa maiores molestias nesciunt nobis obcaecati perspiciatis porro possimus quos repellat ullam, veniam vero voluptatem voluptates. Doloribus dolorum temporibus voluptatum! Autem consequuntur cupiditate dolore et fugit iste neque odio placeat, tempore veniam. Aspernatur deserunt distinctio dolor iste laudantium modi pariatur porro praesentium quae reiciendis rem repellendus similique sunt, tempore, veniam! Aperiam dolor, doloremque eos facilis iure labore nesciunt non officiis provident? Architecto atque consectetur cumque dolor dolorum earum enim eum facilis fugit in magnam modi, obcaecati, perspiciatis quo recusandae vel voluptatibus! Ab corporis dicta dolores ducimus est eum fugit illum itaque, nam neque nihil nostrum, nulla, officiis praesentium quaerat quisquam suscipit totam veniam voluptas voluptatum. Ab autem beatae delectus harum in ipsa quas quia voluptas, voluptatibus voluptatum. Commodi doloremque, fuga itaque minus porro quaerat quo sunt totam! A, aliquid aperiam architecto at atque distinctio ea iste laborum maxime quibusdam suscipit tempora ut, voluptatem? Consequuntur cumque doloribus eius, id, illum in ipsum minus obcaecati officiis provident quibusdam quidem sit suscipit tenetur voluptates. Accusamus accusantium alias animi autem enim exercitationem facilis id illum laboriosam, laudantium modi molestias mollitia nam nemo numquam, pariatur placeat quam quis reiciendis repellat repudiandae saepe velit vero voluptates, voluptatibus. Architecto culpa deleniti itaque minima necessitatibus, quaerat quam quos soluta temporibus voluptate. Assumenda error ipsum numquam odio placeat, porro quia repellendus temporibus. Cupiditate eum fugit in magnam quam tempore, voluptate. Animi cumque deleniti doloribus error molestiae perspiciatis similique velit! A accusamus aliquid amet atque commodi cumque cupiditate debitis deleniti dolorum earum, eveniet ex fugiat fugit harum illum iste labore libero magni molestiae mollitia nobis omnis optio qui quidem, quis sapiente sint unde veritatis voluptas voluptatibus? Aliquam eaque eligendi explicabo neque quisquam, tempore vel? Cumque molestiae optio porro similique! Ab aliquid assumenda ducimus eos eum explicabo, inventore ipsam libero magni minus mollitia nihil odio, quod rem repellendus tempore ut. Accusantium aperiam dolore explicabo impedit quaerat quo saepe soluta tenetur ut voluptatem. Aperiam architecto consectetur consequatur deleniti eligendi expedita fugiat fugit incidunt ipsam ipsum itaque labore, maiores mollitia natus nisi nobis nulla numquam omnis provident quas, quod reiciendis repellat repudiandae suscipit vel velit voluptas voluptatum. Accusamus assumenda dolores fugiat. Assumenda culpa, cupiditate eligendi facere facilis iure maxime repellat tempore. Aut, commodi consequatur consequuntur dolore eaque eveniet, facere illum magni officia placeat, possimus provident saepe vel? Alias dicta, eaque in inventore libero modi, nam obcaecati provident quod sed, voluptate voluptatum. Autem commodi dolorum ducimus in laboriosam maiores nisi odit repudiandae. Animi blanditiis consectetur culpa deleniti doloribus, incidunt itaque laudantium maxime minus natus nostrum possimus quas quidem quos tempora tenetur veritatis vitae voluptatum? Delectus, ducimus, et illo incidunt ipsam magnam magni mollitia perferendis porro quaerat, sequi soluta totam velit! Animi beatae dolorem est, iste neque, non possimus quas, quibusdam sed suscipit tempora unde voluptas. Aperiam architecto, aspernatur aut blanditiis cupiditate itaque laborum magnam maxime minima nostrum, obcaecati odit placeat porro possimus praesentium provident qui quibusdam quidem recusandae reiciendis, reprehenderit soluta unde voluptatibus! A adipisci dolorum eum fuga perspiciatis quis ullam voluptatem. Beatae commodi illum ipsa laudantium nam nemo odit praesentium quasi quia quibusdam quidem repellat sequi velit veritatis vitae, voluptatibus!
-
-        </p>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-    </div>
-
+    <!-- Wrapper -->
     <!-- SiteContent End -->
 
     <!-- JS -->
@@ -190,7 +345,9 @@
     <script src="dev/js/vendors/jquery-2.1.1.js" type="text/javascript"></script>
     <script src="dev/js/vendors/bootstrap.js" type="text/javascript"></script>
     <script src="dev/js/vendors/less-1.7.4.min.js" type="text/javascript"></script>
-    <script src="dev/js/vendors/jquery.ui.touch-punch.js"></script>
+    <script src="dev/js/vendors/jquery.ui.touch-punch.js" type="text/javascript"></script>
+    <script src="dev/js/vendors/jquery-ui.js" type="text/javascript"></script>
+    <script src="dev/js/vendors/handlebars-v2.0.0.js" type="text/javascript"></script>
 
     <!-- временный файл для холдера -->
     <script src="holderjs/holder.js"></script>

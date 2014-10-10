@@ -4,7 +4,7 @@
 @import "mixins";
 @import "fonts";
 
-@container-width : 1000px;
+/*@container-width : 1000px;
 @container-heigth: 650px;
 
 .wrapper {
@@ -15,7 +15,7 @@
     overflow: hidden;
     min-width: @container-width + 10px;
 
-}
+}*/
 ul {
     padding: 0;
     margin: 0;
@@ -35,9 +35,333 @@ textarea {
 }
 /* ------------------------------------------- */
 
+/* SiteContent */
+
+/* NavBar */
+.transNavbar {
+    opacity:0.07;
+    filter:alpha(opacity=7);
+    -moz-opacity:0.07;
+    background-color: #00171c;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+}
+.navbar {
+    border-bottom: 3px solid #9dc2c9;
+    height: 198px;
+    background: transparent;
+    margin-bottom: 26px;
+}
+.caption__email {
+    background: #ffffff;
+    border-radius: 0 10px 10px 0 ;
+    height: 55px;
+    width: 190px;
+    border: 2px dashed #8c8c8c;
+    margin-top: 34px;
+
+    .opensans-condlight;
+    color: #00778c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 10px;
+    a {
+        color: #00778c;
+    }
+    i {
+        font-size: 13px;
+    }
+}
+.img-center {
+    display: block;
+    margin: 10px auto;
+}
+.caption__cart_empty {
+    background: #ffffff;
+    border-radius: 10px 0 0 10px;
+    height: 55px;
+    width: 190px;
+    border: 2px dashed #8c8c8c;
+    margin-top: 34px;
+
+    .opensans-condlight;
+    color: #00778c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.caption__cart_full {
+    background: #ffffff;
+    border-radius: 10px 0 0 10px;
+    height: 96px;
+    width: 217px;
+    border: 2px dashed #8c8c8c;
+    margin-top: 34px;
+
+    .opensans-condlight;
+    color: #00778c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+
+    i {
+        font-size: 13px;
+    }
+}
+.col-xs-offset__full-6, .col-sm-offset__full-6 {
+    margin-left: 155px;
+    padding: 0;
+    position:relative;
+    overflow: hidden;
+    padding-top: 18px;
+}
+.navbar__orderbutton {
+    vertical-align: bottom;
+    background: #006b7e;
+    width: 100%;
+    height: 35px;
+    position:absolute;
+	bottom:0;
+    .opensans-condbold;
+    color: #ffffff;
+    font-size: 16px;
+    padding-top: 6px;
+}
+.navbar__cart_margin {
+    margin-right: 5px !important;
+}
+/* ------------------------------------------- */
 
 
+/* jumbotron */
+.transJumbotron {
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -moz-opacity:0.4;
+    background-color: #00171c;
+    width:100%;
+    height:100%;
+    position:absolute;
+    margin-top: -48px;
+    margin-left: -60px;
+    z-index:-1;
+}
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent !important;
+    h3 {
+        .opensans-condbold;
+        margin: 0;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 24px;
+    }
+    p {
+        .opensans-semibold;
+        padding-top: 34px;
+        font-size: 14px;
+        color: #ffffff;
+    }
+}
+/* ------------------------------------------- */
+
+/* Stok */
+.stokJumbotron {
+    margin-top: 19px;
+    margin-bottom: 35px;
+    background-color: transparent;
+    width: 192px;
+    height: 50px;
+    position: absolute !important;
+    left: 50%;
+    margin-left: -96px;
+    border-radius: 10px;
+    border: 2px dashed #8c8c8c;
+
+    .opensans-condbold;
+    color: #00778c;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    h3{
+        padding-top: 10px;
+    }
+
+}
+.stokContainer {
+    height: 50px+19px+35px; /*
+                                берутся значения из stokJumbotron
+                                margin-top: 19px;
+                                margin-bottom: 35px;
+                            */
+}
+.stokJumbotron h3 {
+    .clearfix;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.row {
+    margin-bottom: 49px;
+}
+.thumbnail {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    h3 {
+        background-color: #899395;
+        height: 32px;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        text-align: center;
+        .opensans-condbold;
+        color: #ffffff;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-top: 6px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    p {
+        text-align: center;
+        .opensans-condbold;
+        color: #505050;
+        font-size: 16px;
+        margin-bottom: 5px;
+        .icon-rouble {
+            font-size: 12px;
+        }
+    :hover {
+        color: #175762;
+    }
+    }
+}
+.thumbnail:hover {
+        box-shadow: 0 0 20px 10px rgba(142, 173, 180, 1);
+        -webkit-transition: 2s;
+        -moz-transition: 2s;
+        -ms-transition: 2s;
+        -o-transition: 2s;
+        transition: 2s;
+}
+.btn__stok {
+    display: inline-block;
+    padding-top: 2px;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    height: 27px;
+    width: 27px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #006b7e;
+    background-color: #dceaec;
+    :hover {
+        color: #175762;
+    }
+}
+
+/* ------------------------------------------- */
+
+/* Accordion (Information about our stok items) */
+.transAccordion {
+    border-top: 1px solid #e0e0e0;
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -moz-opacity:0.4;
+    background-color: #FFFFFF;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+}
+.accordion__position {
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+.accordionContainer {
+    position: relative;
+}
+/* ------------------------------------------- */
+
+/* Footer */
+.transFooter {
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -moz-opacity:0.4;
+    background-color: #ffffff;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+}
+.footer__left {
+    height: 135px;
+    width: 33%;
+    float: left;
+    .opensans-regular;
+    color: #909090;
+    font-size: 13px; /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 18px; /* Приближение из-за подстановки шрифтов */
+    a {
+        color: #00778c;
+    }
+    p {
+        margin: 15px;
+    }
+}
+.footer__center {
+    width: 33%;
+    float: left;
+}
+.footer__right {
+    height: 135px;
+    width: 33%;
+    float: left;
+
+    /*.opensans-regular;*/
+    .opensans-condbold;
+    color: #00778c;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    a {
+        color: #00778c;
+    }
+    i {
+        font-size: 13px;
+    }
+    p {
+        margin: 45px;
+        text-align: right;
+    }
+}
+
+/* ------------------------------------------- */
 
 
+/*  */
 
+/* ------------------------------------------- */
 

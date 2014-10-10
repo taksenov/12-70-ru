@@ -17,6 +17,7 @@ sitebellib.ini
 .idea/
 /temp
 /holderjs
+/bower_components
 /static/SQLs/
 migrations/
 /node_modules
