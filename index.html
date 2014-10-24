@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>Мы продаем только то, чем пользуемся сами. 12-70.ru</title>
     <meta name="author" content="taksenov@gmail.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,58 +46,117 @@
 
             <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="caption">
-                                <div class="col-xs-6 col-sm-6 caption__email">
-                                    <p>
-                                         <i class="icon-emailalt"></i> <a href="mailto:zakaz@12-70.ru"><b>zakaz@12-70.ru</b></a>
-                                    </p>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md-4-logo">
-                        <img src="static/img/common/logoUp.png" class="img-center">
-                    </div>
-                    <div class="col-md-4">
-                        <div class="caption">
-                            <div class="row navbar__cart_margin">
-
-<!--                                <div class="col-xs-offset-6 col-sm-offset-6 caption__cart_empty">
-                                    <p>
-                                         <i class="icon-shopping-cart"></i> Ваша корзина пуста
-                                    </p>
-                                </div>-->
-                                <div class="col-xs-6 col-sm-6 col-xs-offset__full-6 col-sm-offset__full-6 caption__cart_full">
-                                    <p>
-                                         <i class="icon-shopping-cart"></i> <b>2</b> товара на <b>1000</b> <i class="icon-rouble"></i>
-                                    </p>
-                                    <div class="navbar__orderbutton">
-                                        <p>Оформить заказ</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
+                <div class="header__left">
+                    <div class="caption__email">
+                        <p>
+                             <i class="icon-emailalt"></i> <a href="mailto:zakaz@12-70.ru"><b>zakaz@12-70.ru</b></a>
+                        </p>
                     </div>
                 </div>
 
+                <div class="header__left-center"></div>
+
+                <div class="header__center">
+                    <a class="navbar__logo" href="/">
+                        <img src="static/img/common/logoUp.png" class="img-center">
+                    </a>
+                </div>
+
+                <div class="header__right-center"></div>
+
+                <div class="header__right">
+                    <div class="navbar__cart_margin">
+                        <div class="caption__cart">
+                            <p>
+                                 <i class="icon-shopping-cart"></i> <span id="status">Ваша корзина пуста</span>
+                                <!--<b>2</b> товара на <b>1000</b> <i class="icon-rouble"></i>-->
+                            </p>
+                            <a data-toggle="modal" class="doit">
+                                <div class="navbar__orderbutton">
+                                    <p>Оформить заказ</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Fixed navbar -->
 
+        <!-- Окно заказа -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Корзина</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="msg"></div>
+                  <form id="order-form" class="form-horizontal" role="form">
+                    <h4>Ваш заказ</h4>
+                    <div id="order" class="wrapp">
+                      <!-- сюда приходят заказы -->
+                    </div>
+                    <h4>Ваши данные</h4>
+                    <div class="wrapp">
+                      <div class="form-group">
+                        <label for="name" class="col-xs-3 control-label">Ваше имя</label>
+                        <div class="col-xs-9">
+                          <input type="name" class="form-control" id="name" placeholder="Имя" name="name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="phone" class="col-xs-3 control-label">Телефон</label>
+                        <div class="col-xs-9">
+                          <input type="phone" class="form-control" id="phone" placeholder="Телефон" name="phone">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="col-xs-3 control-label">Ваш email</label>
+                        <div class="col-xs-9">
+                          <input type="email" class="form-control" id="email" placeholder="Почта" name="email">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+                  <button type="submit" class="btn btn-warning" form="order-form">Заказать</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- Окно заказа -->
+
+        <!-- Сообщения от системы -->
+        <div class="message-box container">
+          <div class="alert bg-danger">
+              <p>
+                  Вы не выбрали ни один товар. Кликайте по товарам, которые нравятся!
+              </p>
+          </div>
+        </div>
+        <!-- Сообщения от системы -->
+
         <!-- jumbotron -->
-        <div class="container">
+        <div class="container jumbo">
             <div class="jumbotron">
 
                 <div class="transJumbotron"></div>
 
                 <h3>ПРОДАЖА КОМПЛЕКТУЮЩИХ ДЛЯ СНАРЯЖЕНИЯ ОХОТНИЧЬИХ ПАТРОНОВ КАЛИБРА <font color="#00778c">12/70</font></h3>
                 <p>
-                    <i class="icon-shopping-cart"></i>
-                    This is a template for a simple marketing or informational website.
-                    It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+                    Охотнику или спортсмену-стрелку нужно только одно &mdash; хорошие и резкие выстрелы.
+                    Хороший выстрел, а тем более если этот выстрел ответственный, может дать только патрон собранный самостоятельно.
+                    Ведь в случае самостоятельной сборки патрона человек сам контролирует его качество, а не доверяет это бездушной машине, которые собирают патроны на заводах.
+                    Кроме этого, нам не раз приходилось сталкиваться с отвратительным качеством заводских патронов.
+                    Поэтому мы предлагаем вам комплектующие для самостоятельной сборки патронов калибра <font color="#00778c">12/70</font>.
+                    Ознакомиться с ассортиментом и сделать заказ вы легко можете на странице нашего интернет-магазина.
+                    Мы внимательно относимся к каждому клиенту и высылаем заказы транспортными компаниями в любую точку России.
+                    Дополнительная информация о наших товарах, отзывы покупателей, инструкции которыми мы пользуемся при сборке патронов Вы можете прочитать пролистав страницу нашего интернет-магазина вниз. Мы продаем только то, чем пользуемся сами.
+
                 </p>
 
 
@@ -115,139 +174,10 @@
 
         <!-- stok -->
         <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/002.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>гильза красная NRG</h3>
-                                    <p>100 шт - 500 <i class="icon-rouble"></i></p>
+                    <div class="row" id="product-area">
 
-                                    <p>
-                                        Количество:
-                                        <input id="spinner1">
-                                        <a  class="btn btn__stok" role="button" id="setvalue2"><i class="icon-plus-sign"></i></a>
-                                        <a  class="btn btn__stok" role="button" id="setvalue3"><i class="icon-minus-sign"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/002.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>гильза красная NRG</h3>
-                                    <p>100 шт - 500 <i class="icon-rouble"></i></p>
+                        <!-- Товары рендерятся тут -->
 
-                                    <p>
-                                        КОЛИЧЕСТВО:
-                                        <input id="spinner2">
-                                        <a  class="btn btn__stok" role="button" id="setvalue4"><i class="icon-plus-sign"></i></a>
-                                        <a  class="btn btn__stok" role="button" id="setvalue5"><i class="icon-minus-sign"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/003.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>микс из гильз</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/004.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/005.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/006.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="static/img/stok/007.jpg" alt="..." class="img-rounded">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
         </div>
         <!-- stok -->
@@ -263,7 +193,7 @@
                         <div class="panel-heading">
                           <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                              Collapsible Group Item #1
+                              Наши партнеры
                             </a>
                           </h4>
                         </div>
@@ -277,7 +207,7 @@
                         <div class="panel-heading">
                           <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                              Collapsible Group Item #2
+                              Статьи, рецепты сборки патронов, фото и видео-материалы
                             </a>
                           </h4>
                         </div>
@@ -328,10 +258,11 @@
                 <p>
                     <i class="icon-emailalt"></i> <a href="mailto:zakaz@12-70.ru"><b>zakaz@12-70.ru</b></a>
                 </p>
+                <div class="normaltext">
+                    Если вы хотите заказать более чем 1000 гильз или пыжей, или более 10 кг дроби, то пишите нам на наш адрес электронной почты.
+                </div>
 
             </div>
-
-<!--            <p class="text-muted">Place sticky footer content here.</p>-->
           </div>
         </div>
         <!-- Footer -->
@@ -339,6 +270,50 @@
     </div>
     <!-- Wrapper -->
     <!-- SiteContent End -->
+
+
+    <!-- ТОВАРЫ -->
+    <script id="blocks" type="text/x-handlebars-template">
+      {{#each blocks}}
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="static/img/stok/{{alias}}_198x198.jpg" alt="..." class="img-rounded imageOrderImg">
+                <div class="caption">
+                    <h3>{{rus}}</h3>
+                    <p>{{unit}} - {{price}} <i class="icon-rouble"></i></p>
+
+                    <p class="stokInput">
+                        Количество:
+                        <input id="spinner1" name="{{rus}}" data="{{alias}}" data-price="price" class="spinners" value="0">
+                    </p>
+                </div>
+            </div>
+        </div>
+      {{/each}}
+    </script>
+
+    <!-- КОРЗИНА -->
+    <script id="order-template" type="text/x-handlebars-template">
+      {{#each goods}}
+        {{#if amount}}
+        <div class="form-group">
+          <label class="col-md-3 control-label">{{productNameRus}}</label>
+          <div class="col-xs-12 col-md-9 cart-prod-line">
+            <div class="text-in"> {{productUnit}} <span class="x">x</span> </div>
+            <input id="spinner2" data="{{productAlias}}" name="{{productNameRus}}" data-price="{{productPrice}}" class="spinners" value="{{amount}}">
+            <div class="text-in"><span class="x">x</span><span class="product-price">{{productPrice}}</span><span class="x">=</span><span class="current-sum">{{productSum}}</span> руб.</div>
+          </div>
+        </div>
+        {{/if}}
+      {{/each}}
+      <div class="form-group">
+        <label class="col-xs-3 control-label">Итого</label>
+        <div class="col-xs-9 input-group">
+          <input type="text" id="total-sum" name="Итого" class="form-control" value="{{totalPrice}}" readonly="readonly">
+          <span class="input-group-addon">руб</span>
+        </div>
+      </div>
+    </script>
 
     <!-- JS -->
     <script src="dev/js/vendors/modernizr-2.8.3.js"></script>
@@ -348,10 +323,6 @@
     <script src="dev/js/vendors/jquery.ui.touch-punch.js" type="text/javascript"></script>
     <script src="dev/js/vendors/jquery-ui.js" type="text/javascript"></script>
     <script src="dev/js/vendors/handlebars-v2.0.0.js" type="text/javascript"></script>
-
-    <!-- временный файл для холдера -->
-    <script src="holderjs/holder.js"></script>
-
 
     <script src="dev/js/main.js"></script>
 

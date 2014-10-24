@@ -4,18 +4,6 @@
 @import "mixins";
 @import "fonts";
 
-/*@container-width : 1000px;
-@container-heigth: 650px;
-
-.wrapper {
-    position: relative;
-    min-height: @container-heigth + 20px;
-    height: auto !important;
-    height: 100%;
-    overflow: hidden;
-    min-width: @container-width + 10px;
-
-}*/
 ul {
     padding: 0;
     margin: 0;
@@ -54,9 +42,34 @@ textarea {
     background: transparent;
     margin-bottom: 26px;
 }
+.header__left {
+    float: left;
+    width: 20%;
+    height: 194px;
+}
+.header__left-center {
+    float: left;
+    width: 20%;
+    height: 194px;
+}
+.header__center {
+    float: left;
+    width: 20%;
+    height: 194px;
+}
+.header__right-center {
+    float: left;
+    width: 20%;
+    height: 194px;
+}
+.header__right {
+    float: left;
+    width: 20%;
+    height: 194px;
+}
 .caption__email {
     background: #ffffff;
-    border-radius: 0 10px 10px 0 ;
+    border-radius: 10px;
     height: 55px;
     width: 190px;
     border: 2px dashed #8c8c8c;
@@ -68,6 +81,11 @@ textarea {
     font-size: 18px;
     font-weight: 500;
     padding-top: 10px;
+
+    margin-left: 11px;
+    position:relative;
+    overflow: hidden;
+
     a {
         color: #00778c;
     }
@@ -79,24 +97,9 @@ textarea {
     display: block;
     margin: 10px auto;
 }
-.caption__cart_empty {
+.caption__cart {
     background: #ffffff;
-    border-radius: 10px 0 0 10px;
-    height: 55px;
-    width: 190px;
-    border: 2px dashed #8c8c8c;
-    margin-top: 34px;
-
-    .opensans-condlight;
-    color: #00778c;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    padding-top: 10px;
-}
-.caption__cart_full {
-    background: #ffffff;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
     height: 96px;
     width: 217px;
     border: 2px dashed #8c8c8c;
@@ -108,18 +111,28 @@ textarea {
     font-size: 18px;
     font-weight: 500;
 
-    i {
-        font-size: 13px;
-    }
-}
-.col-xs-offset__full-6, .col-sm-offset__full-6 {
-    margin-left: 155px;
+    margin-left: 11px;
     padding: 0;
     position:relative;
     overflow: hidden;
     padding-top: 18px;
+
+    i {
+        font-size: 13px;
+    }
 }
+
+/* настройки для фиксированной корзины */
+.cart_fixed {
+    position: fixed;
+    z-index: 10;
+    top: 4px;
+    right: 5px;
+}
+/* настройки для фиксированной корзины */
+
 .navbar__orderbutton {
+    cursor: pointer;
     vertical-align: bottom;
     background: #006b7e;
     width: 100%;
@@ -136,6 +149,27 @@ textarea {
 }
 /* ------------------------------------------- */
 
+/* -------= модальное окно корзины и сообщения о пустой корзине =------- */
+.msg{margin: 20px 10px; }
+.alert{display: none; }
+
+/*модальное окно*/
+.modal-body{padding: 0 20px 10px;background: url('../../static/img/common/cart_bg_dark.png') repeat;}
+.modal-body h4{padding-left: 15px;padding-top: 20px;padding-bottom: 0; color: #5F3007; }
+.modal-body .input-group{max-width: 160px; padding-left: 15px;}
+.modal-body input{max-width: 200px;}
+.modal-body .control-label{font-size: 15px;}
+.modal-header{border-bottom: none; color: wheat; padding-bottom: 0; }
+.modal-footer{border-top: none; padding-top: 0}
+.modal-content{background: url('/img/Melamine-wood-004.jpg') repeat;}
+.modal-footer .btn{color: #5F3007; font-size: 18px}
+.modal-body .wrapp{ color: #5F3007; background: rgba(255,255,255,0.8); border-radius: .25em; margin: 10px auto 20px; border: 1px dashed #DDAF83; box-shadow: 0 0 0 2px rgba(255,255,255,0.8); padding: 15px 0 0 }
+.modal-body .text-in{font-family: 'Times New Roman'; font-size: 14px; display: block; float: left; padding-top: 6px;}
+.modal-body .text-in .x{color:#DB7264;font-family:arial;font-weight:bold;padding:0 6px; }
+.modal-body .ui-spinner{float: left;}
+.modal-body .done-box{ font-size: 120%; padding: 20px 0 10px;}
+.spin-btn{ background: url('/img/spinner.gif') center center no-repeat; background-size: 30%; }
+/* ------------------ */
 
 /* jumbotron */
 .transJumbotron {
@@ -251,35 +285,46 @@ textarea {
         -o-transition: 2s;
         transition: 2s;
 }
-.btn__stok {
-    display: inline-block;
-    padding-top: 2px;
-    padding-left: 0;
-    padding-bottom: 0;
-    padding-right: 0;
-    height: 27px;
-    width: 27px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    color: #006b7e;
-    background-color: #dceaec;
-    :hover {
-        color: #175762;
-    }
+
+/*спиннер больше-меньше*/
+.ui-spinner {
+    border: none;
+    background: transparent;
 }
+.ui-spinner-input {
+    border: 1px solid #006b7e !important;
+    color: #006b7e;
+    background-color: #fff;
+    padding: 0 2px 0 12px;
+    border-radius: 6px;
+    width: 34px;
+    margin: 0.2em;
+    float: left;
+}
+.ui-spinner-up {
+    background: #006b7e url("../../static/img/common/plus.png") !important;
+    border: none !important;
+}
+.ui-icon,
+.ui-icon-triangle-1-n,
+.ui-button-text {
+    display: none;
+}
+
+.ui-spinner-down{
+    background: #006b7e url("../../static/img/common/minus.png") !important;
+    border: none !important;
+}
+.ui-spinner-up:hover, .ui-spinner-down:hover{cursor: pointer; }
+.ui-spinner-button {
+    width: 28px !important;
+    height: 28px !important;
+    position: relative !important;
+    float: left;
+    margin: 4px;
+}
+.ui-spinner-button:active {margin-top: 0.5em; }
+/*спиннер больше-меньше*/
 
 /* ------------------------------------------- */
 
@@ -301,6 +346,12 @@ textarea {
 }
 .accordionContainer {
     position: relative;
+}
+.panel-heading {
+    background-color: #8a9395 !important;
+    .opensans-condbold;
+    color: #ffffff !important;
+    text-transform: uppercase;
 }
 /* ------------------------------------------- */
 
@@ -340,7 +391,6 @@ textarea {
     width: 33%;
     float: left;
 
-    /*.opensans-regular;*/
     .opensans-condbold;
     color: #00778c;
     font-size: 20px;
@@ -353,15 +403,88 @@ textarea {
         font-size: 13px;
     }
     p {
-        margin: 45px;
-        text-align: right;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .normaltext {
+        .opensans-regular;
+        color: #909090;
+        font-size: 13px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 400;
+        line-height: 18px; /* Приближение из-за подстановки шрифтов */
+    }
+}
+/* ------------------------------------------- */
+
+/* MediaQueries */
+/* разрешение меньше 1010px но больше 993px*/
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+    .header__left-center,
+    .header__right-center {
+        display: none;
+    }
+    .header__left,
+    .header__center,
+    .header__right {
+        width: 33%;
+    }
+}
+/* разрешение меньше 992px*/
+@media screen and (max-width: 992px) {
+    .header__left-center,
+    .header__right-center
+    {
+        display: none;
+    }
+
+    .header__left {
+        display: none;
+    }
+
+    .header__center,
+    .header__right {
+        width: 50%;
+    }
+
+
+    .footer__left,
+    .footer__center {
+        display: none;
+    }
+    .footer__right {
+        width: 80%;
+        float: left;
+    }
+
+    .jumbotron {
+        display: none;
+    }
+    .jumbo {
+        display: none;
+    }
+
+    .alert {
+        font-size: 16px;
+        padding: 5px 8px;
     }
 }
 
-/* ------------------------------------------- */
-
-
-/*  */
-
+@media screen and (max-width: 599px) {
+    .header__center {
+        display: none;
+    }
+    .navbar {
+        height: 114px;
+    }
+    .caption__cart_full {
+        margin-top: 4px;
+    }
+	.alert {
+        font-size: 14px;
+        padding: 5px 8px;
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+}
 /* ------------------------------------------- */
 

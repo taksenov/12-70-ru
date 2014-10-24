@@ -1,0 +1,74 @@
+{
+    "blocks": [
+        {
+            "rus"   : "гильза красная nrg",
+            "alias" : "redshellnrg",
+            "price" : "120",
+            "unit"  : "100 шт."
+        },
+        {
+            "rus"   : "микс из гильз",
+            "alias" : "mixshell",
+            "price" : "60",
+            "unit"  : "100 шт."
+        },
+        {
+            "rus"   : "пыж н24-био",
+            "alias" : "h24biowad",
+            "price" : "150",
+            "unit"  : "100 шт."
+        },
+        {
+            "rus"   : "пыж н19",
+            "alias" : "h19wad",
+            "price" : "150",
+            "unit"  : "100 шт."
+        },
+        {
+            "rus"   : "пыж н17",
+            "alias" : "h17wad",
+            "price" : "150",
+            "unit"  : "100 шт."
+        },
+        {
+            "rus"   : "дробь №5",
+            "alias" : "5shot",
+            "price" : "200",
+            "unit"  : "1 кг."
+        },
+        {
+            "rus"   : "дробь №4",
+            "alias" : "4shot",
+            "price" : "200",
+            "unit"  : "1 кг."
+        },
+        {
+            "rus"   : "дробь №3",
+            "alias" : "3shot",
+            "price" : "200",
+            "unit"  : "1 кг."
+        },
+        {
+            "rus"   : "дробь №0",
+            "alias" : "0shot",
+            "price" : "200",
+            "unit"  : "1 кг."
+        },
+        {
+            "rus"   : "картечь 5.9",
+            "alias" : "5-9case-shot",
+            "price" : "200",
+            "unit"  : "1 кг."
+        },
+        {
+            "rus"   : "картечь 8",
+            "alias" : "8case-shot",
+            "price" : "200",
+            "unit"  : "1 кг."
+        }
+    ]
+}
+
+
+
+
