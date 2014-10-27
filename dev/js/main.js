@@ -80,11 +80,12 @@
 
         // подключает прослушку событий
         setUpListeners: function () {
-            $(window).on('scroll', app.scroll); // скролл окна (показываем/прячем блочок с корзиной)
-            $(".spinners").on( "spin", app.changeOrderSpin ); // меняем количество товара в спиннере
-            $(".imageOrderImg").on("click", app.changeOrderImg); // меняем количество товара кликом по картинке
+            $(window).on('scroll', app.scroll);                            // скролл окна (показываем/прячем блочок с корзиной)
+            $(".spinners").on( "spin", app.changeOrderSpin );              // меняем количество товара в спиннере
+            $(".imageOrderImg").on("click", app.changeOrderImg);           // меняем количество товара кликом по картинке
             $('.doit').on('click', '.navbar__orderbutton', app.showModal); // клик на "Оформить заказ"
-            $('#order').on('spin', '.spinners', app.spinInCart); // пересчитываем значения в корзине
+            $('#order').on('spin', '.spinners', app.spinInCart);           // пересчитываем значения в корзине
+            $("#order-form").on('submit', app.formSubmit);                 // отправка формы (заказ)
         },
 
         /* добавляем или убираем товар из корзины по нажатию на кнопки + и - */
@@ -204,6 +205,7 @@
             $('#total-sum').val(app.totalPrice); // пересчитываем общую стоимость заказа в модальном окне
             app.productAreaSpinnersUpdate(newVal, productAlias); // обновляем спиннеры главной области
         },
+
         // обновляем спиннеры главной области
         productAreaSpinnersUpdate: function(newVal, productAlias){
             var spinInput = $('#product-area').find('input[data="' + productAlias + '"]');
@@ -237,10 +239,71 @@
             }else{ // если корзина пуста
                 $('.alert').show(); // показываем сообщение
             }
-        }
+        },
         /* ------------------------------------------------ */
 
+        // отправляет запрос на сервер
+        formSubmit: function (ev) {
+            ev.preventDefault();
+            var form = $(this),
+                name = $('#name').val(),
+                phone = $('#phone').val(),
+                goods = [],
+                total = app.totalPrice,
+                modalDialog = $('.modal-dialog'),
+                submitBtn = modalDialog.find('button[type="submit"]'),
+                msgBox = $('.msg');
+                msgBox.html(''); // очищаем блок сообщений с сервера
 
+            $.each(app.order.goods, function(index, val) {
+                if(val.amount !== 0){
+                goods.push({
+                        'productNameRus' : val.productNameRus,
+                        'productPrice' : val.productPrice,
+                        'amount' : val.amount,
+                        'productSum' : val.productSum
+                    });
+                }
+            });
+
+            var data = {
+                'goods' : goods,
+                'total' : total,
+                'name' : name,
+                'phone' : phone
+            };
+
+            console.log(data);
+
+            submitBtn.attr({disabled: 'disabled'}).addClass('spin-btn'); // защита от повторного нажатия + показываем загрузчик
+
+            $.ajax({
+                type: "POST",
+                url: "contact_form/contact_process.php",
+                data: data
+            }).done(function(msg){
+                if(msg == 'OK') {
+                    var result = '<div class="done-box">Спасибо за ваш заказ!<br> Мы свяжемся с вами в течение дня.</div>';
+                        modalDialog.find('.modal-body').append(result); // вставляем сообщение
+                        submitBtn.hide(); // удаляем кнопку ЗАКАЗАТЬ
+                        form.hide(); // прячем форму
+                        // очищаем заказ, корзину, объекты и свойства
+                        app.spinners.spinner( "value", 0 );
+                        $('#status').html('Ваша корзина пуста');
+                        app.order.goods = [];
+                        app.fillOrderObject(app.products);
+                        app.totalPrice = 0;
+                } else {
+                    $(".msg").html(msg);
+                }
+            }).fail(function(){
+                console.log('ajax fail!');
+            }).always(function(){
+                submitBtn.removeAttr('disabled').removeClass('spin-btn');
+            });
+            return false;
+        }
+        /* ------------------------------------------------ */
 
     };
 

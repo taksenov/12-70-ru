@@ -154,21 +154,88 @@ textarea {
 .alert{display: none; }
 
 /*модальное окно*/
-.modal-body{padding: 0 20px 10px;background: url('../../static/img/common/cart_bg_dark.png') repeat;}
-.modal-body h4{padding-left: 15px;padding-top: 20px;padding-bottom: 0; color: #5F3007; }
-.modal-body .input-group{max-width: 160px; padding-left: 15px;}
-.modal-body input{max-width: 200px;}
-.modal-body .control-label{font-size: 15px;}
-.modal-header{border-bottom: none; color: wheat; padding-bottom: 0; }
-.modal-footer{border-top: none; padding-top: 0}
-.modal-content{background: url('/img/Melamine-wood-004.jpg') repeat;}
-.modal-footer .btn{color: #5F3007; font-size: 18px}
-.modal-body .wrapp{ color: #5F3007; background: rgba(255,255,255,0.8); border-radius: .25em; margin: 10px auto 20px; border: 1px dashed #DDAF83; box-shadow: 0 0 0 2px rgba(255,255,255,0.8); padding: 15px 0 0 }
-.modal-body .text-in{font-family: 'Times New Roman'; font-size: 14px; display: block; float: left; padding-top: 6px;}
-.modal-body .text-in .x{color:#DB7264;font-family:arial;font-weight:bold;padding:0 6px; }
-.modal-body .ui-spinner{float: left;}
-.modal-body .done-box{ font-size: 120%; padding: 20px 0 10px;}
-.spin-btn{ background: url('/img/spinner.gif') center center no-repeat; background-size: 30%; }
+.btn__order {
+    background-color: #899395;
+    border: 1px solid #899395;
+}
+.btn__order :hover {
+    background-color: #899395 !important;
+}
+.modal-body{
+    padding: 0 20px 10px;
+    background: url('../../static/img/common/cart_bg_dark.png') repeat;
+}
+.modal-body h4{
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    .opensans-condbold;
+    color: #00778c;
+}
+.modal-body .input-group{
+    max-width: 160px;
+    padding-left: 15px;
+}
+.modal-body input{
+    max-width: 200px;
+}
+.modal-body .control-label{
+    .opensans-condbold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.modal-header{
+    .opensans-condbold;
+    color: #00778c;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.modal-footer{
+    border-top: none;
+    padding-top: 15px;
+}
+.modal-content{
+    background: url('../../static/img/common/cart_bg_light.png') repeat;
+}
+.modal-footer .btn{
+    .opensans-condbold;
+    color: #00778c;
+    font-size: 18px;
+}
+.modal-body .wrapp{
+    .opensans-condbold;
+    color: #00778c;
+    background: rgba(255,255,255,0.8);
+    border-radius: .25em;
+    margin: 10px auto 20px;
+    border: 1px dashed #00778c;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.8);
+    padding: 15px 0 0;
+}
+.modal-body .text-in{
+    .opensans-condbold;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    float: left;
+    padding-top: 6px;
+}
+.modal-body .text-in .x{
+    color:#DB7264;
+    font-family:arial;
+    font-weight:bold;padding:0 6px;
+}
+.modal-body .ui-spinner{
+    float: left;
+}
+.modal-body .done-box{
+    font-size: 120%;
+    padding: 20px 0 10px;
+}
+.spin-btn{
+    background: url('../../static/img/common/spinner.gif') center center no-repeat;
+    background-size: 30%;
+}
 /* ------------------ */
 
 /* jumbotron */

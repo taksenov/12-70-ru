@@ -196,6 +196,13 @@ textarea {
   display: none;
 }
 /*модальное окно*/
+.btn__order {
+  background-color: #899395;
+  border: 1px solid #899395;
+}
+.btn__order :hover {
+  background-color: #899395 !important;
+}
 .modal-body {
   padding: 0 20px 10px;
   background: url('../../static/img/common/cart_bg_dark.png') repeat;
@@ -204,7 +211,8 @@ textarea {
   padding-left: 15px;
   padding-top: 20px;
   padding-bottom: 0;
-  color: #5F3007;
+  font-family: "open_sans_condensedbold";
+  color: #00778c;
 }
 .modal-body .input-group {
   max-width: 160px;
@@ -214,35 +222,41 @@ textarea {
   max-width: 200px;
 }
 .modal-body .control-label {
-  font-size: 15px;
+  font-family: "open_sans_condensedbold";
+  text-transform: uppercase;
+  font-size: 14px;
 }
 .modal-header {
+  font-family: "open_sans_condensedbold";
+  color: #00778c;
   border-bottom: none;
-  color: wheat;
   padding-bottom: 0;
 }
 .modal-footer {
   border-top: none;
-  padding-top: 0;
+  padding-top: 15px;
 }
 .modal-content {
-  background: url('/img/Melamine-wood-004.jpg') repeat;
+  background: url('../../static/img/common/cart_bg_light.png') repeat;
 }
 .modal-footer .btn {
-  color: #5F3007;
+  font-family: "open_sans_condensedbold";
+  color: #00778c;
   font-size: 18px;
 }
 .modal-body .wrapp {
-  color: #5F3007;
+  font-family: "open_sans_condensedbold";
+  color: #00778c;
   background: rgba(255, 255, 255, 0.8);
   border-radius: .25em;
   margin: 10px auto 20px;
-  border: 1px dashed #DDAF83;
+  border: 1px dashed #00778c;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
   padding: 15px 0 0;
 }
 .modal-body .text-in {
-  font-family: 'Times New Roman';
+  font-family: "open_sans_condensedbold";
+  text-transform: uppercase;
   font-size: 14px;
   display: block;
   float: left;
@@ -262,7 +276,7 @@ textarea {
   padding: 20px 0 10px;
 }
 .spin-btn {
-  background: url('/img/spinner.gif') center center no-repeat;
+  background: url('../../static/img/common/spinner.gif') center center no-repeat;
   background-size: 30%;
 }
 /* ------------------ */
