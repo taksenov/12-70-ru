@@ -21,7 +21,8 @@
         // запрашивает данные с сервера и отрисовывает их в DOM
         build: function () {
             $.ajax({
-                url: 'data.json'
+                url: 'data.json',
+                dataType: 'JSON'    //добавлено на основе вебинара по js-магазину
             }).done(function(data){
                 app.products = data; // кэшируем продукты
                 app.fillOrderObject(app.products); //добавляем продукты в массив
