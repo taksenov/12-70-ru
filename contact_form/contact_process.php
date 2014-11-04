@@ -160,10 +160,6 @@
             ."Content-type: text/html; charset=utf-8 \r\n"
             ."X-Mailer: PHP/" . phpversion());
 
-        if($mailToClient){
-            echo 'OK';
-        }
-
         //Отправка почты мне
         $mailToMe = mail(
          'zakaz@12-70.ru',
@@ -174,7 +170,7 @@
             ."Content-type: text/html; charset=utf-8 \r\n"
             ."X-Mailer: PHP/" . phpversion());
 
-        if($mailToMe){
+        if($mailToClient && $mailToMe){
             echo 'OK';
         }
 
