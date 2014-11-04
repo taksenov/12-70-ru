@@ -77,7 +77,7 @@
 					<tr>
 						<td>' . $name . '</td>
 						<td>' . $phone . '</td>
-                        <td>' . $email . '</td>                        
+                        <td>' . $email . '</td>
 					</tr>
 				</tbody>
 			</table>
@@ -127,7 +127,7 @@
                     <tr>
                         <td>' . $name . '</td>
                         <td>' . $phone . '</td>
-                        <td>' . $email . '</td>                        
+                        <td>' . $email . '</td>
                     </tr>
                 </tbody>
             </table>
@@ -166,7 +166,8 @@
 
         //Отправка почты мне
         $mailToMe = mail(
-         $email,
+         'zakaz@12-70.ru',
+         //$email,
          $subject, $messageToMe,
              "From: Интернет-магазин 12-70.ru <zakaz@12-70.ru>\r\n"
             ."Reply-To: ".$email."\r\n"
