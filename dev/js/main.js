@@ -291,7 +291,7 @@
                 data: data
             }).done(function(msg){
                 if(msg == 'OK') {
-                    var result = '<div class="done-box">Спасибо за ваш заказ!<br> Мы свяжемся с вами в течение дня.</div>';
+                    var result = '<div class="done-box">Спасибо за Ваш заказ!<br> Мы свяжемся с вами в течение дня.</div>';
                         modalDialog.find('.modal-body').append(result); // вставляем сообщение
                         submitBtn.hide(); // удаляем кнопку ЗАКАЗАТЬ
                         form.hide(); // прячем форму

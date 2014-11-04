@@ -165,8 +165,7 @@
          'zakaz@12-70.ru',
          //$email,
          $subject,
-         //$messageToMe,
-         $messageToClient,
+         $messageToMe,
              "From: Интернет-магазин 12-70.ru <zakaz@12-70.ru>\r\n"
             ."Reply-To: ".$email."\r\n"
             ."Content-type: text/html; charset=utf-8 \r\n"
