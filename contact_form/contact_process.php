@@ -164,7 +164,9 @@
         $mailToMe = mail(
          'zakaz@12-70.ru',
          //$email,
-         $subject, $messageToMe,
+         $subject,
+         //$messageToMe,
+         $messageToClient,
              "From: Интернет-магазин 12-70.ru <zakaz@12-70.ru>\r\n"
             ."Reply-To: ".$email."\r\n"
             ."Content-type: text/html; charset=utf-8 \r\n"
