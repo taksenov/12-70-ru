@@ -250,6 +250,7 @@
             var form = $(this),
                 name = $('#name').val(),
                 phone = $('#phone').val(),
+                email = $('#email').val(), //адрес почты клиента
                 goods = [],
                 total = app.totalPrice,
                 modalDialog = $('.modal-dialog'),
@@ -273,7 +274,8 @@
                 'goods' : goods,
                 'total' : total,
                 'name' : name,
-                'phone' : phone
+                'phone' : phone,
+                'email' : email
             };
 
             console.log(data);

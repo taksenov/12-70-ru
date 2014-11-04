@@ -2,17 +2,17 @@
 
     define("CONTACT_FORM", 'zakaz@12-70.ru');
 
-//    function ValidateEmail($value){
-//        $regex = '/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i';
-//
-//        if($value == '') {
-//            return false;
-//        } else {
-//            $string = preg_replace($regex, '', $value);
-//        }
-//
-//        return empty($string) ? true : false;
-//    }
+    function ValidateEmail($value){
+        $regex = '/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i';
+
+        if($value == '') {
+            return false;
+        } else {
+            $string = preg_replace($regex, '', $value);
+        }
+
+        return empty($string) ? true : false;
+    }
 
     $post = (!empty($_POST)) ? true : false;
 
@@ -22,6 +22,7 @@
         $name = $_POST['name'];
         $phone = $_POST['phone'];
         $total = $_POST['total'];
+        $email = stripslashes($_POST['email']);
         //$smstext = "Заказ орехи от ".$name." тел: ".$phone." сум: ".$total;
         $goods = $_POST['goods'];
         $tr = '';
