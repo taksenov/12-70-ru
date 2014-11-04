@@ -243,6 +243,7 @@
         },
         /* ------------------------------------------------ */
 
+        //todo нужно сделать сегодня валидацию и отпрвку почты клиенту и мне!
         // отправляет запрос на сервер
         formSubmit: function (ev) {
             ev.preventDefault();
@@ -260,10 +261,11 @@
                 if(val.amount !== 0){
                 goods.push({
                         'productNameRus' : val.productNameRus,
-                        'productPrice' : val.productPrice,
-                        'amount' : val.amount,
-                        'productSum' : val.productSum
-                    });
+                        'productPrice'   : val.productPrice,
+                        'amount'         : val.amount,
+                        'productUnit'    : val.productUnit,
+                        'productSum'     : val.productSum
+                });
                 }
             });
 
