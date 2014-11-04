@@ -5,8 +5,7 @@
         // инициализация, "точка входа"
         initialize : function () {
             app.build();
-            app.setUpListeners();
-
+            app.registerHelper();
         },
 
         // объект, который содержит всю информацию
@@ -85,8 +84,8 @@
             $(".spinners").on( "spin", app.changeOrderSpin );              // меняем количество товара в спиннере
             $(".imageOrderImg").on("click", app.changeOrderImg);           // меняем количество товара кликом по картинке
             $('.doit').on('click', '.navbar__orderbutton', app.showModal); // клик на "Оформить заказ"
-            $('#order').on('spin', '.spinners', app.spinInCart);           // пересчитываем значения в корзине
             $("#order-form").on('submit', app.formSubmit);                 // отправка формы (заказ)
+            $('#order').on('spin', '.spinners', app.spinInCart);           // пересчитываем значения в корзине
         },
 
         /* добавляем или убираем товар из корзины по нажатию на кнопки + и - */
@@ -243,7 +242,7 @@
         },
         /* ------------------------------------------------ */
 
-        
+
         // отправляет запрос на сервер
         formSubmit: function (ev) {
             ev.preventDefault();
@@ -256,20 +255,21 @@
                 modalDialog = $('.modal-dialog'),
                 submitBtn = modalDialog.find('button[type="submit"]'),
                 msgBox = $('.msg');
-                msgBox.html(''); // очищаем блок сообщений с сервера
+
+            msgBox.html(''); // очищаем блок сообщений с сервера
 
             console.log('Присваиваем переменные!');
 
 
             $.each(app.order.goods, function(index, val) {
                 if(val.amount !== 0){
-                goods.push({
-                        'productNameRus' : val.productNameRus,
-                        'productPrice'   : val.productPrice,
-                        'amount'         : val.amount,
-                        'productUnit'    : val.productUnit,
-                        'productSum'     : val.productSum
-                });
+                    goods.push({
+                            'productNameRus' : val.productNameRus,
+                            'productPrice'   : val.productPrice,
+                            'amount'         : val.amount,
+                            'productUnit'    : val.productUnit,
+                            'productSum'     : val.productSum
+                    });
                 }
             });
 

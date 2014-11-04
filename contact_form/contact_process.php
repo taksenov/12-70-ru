@@ -31,7 +31,7 @@
             '<td>' . $item['productPrice'] . '</td>' .
             '<td>' . ((int)$item['amount'] + ' x ' + $item['productUnit']) . '</td>' .
             '<td>' . $item['productSum'] . '</td></tr>';
-        }
+    }
 
 //        $email = stripslashes($_POST['email']);
 //
@@ -44,12 +44,12 @@
 //        $csscode = preg_replace("/(\n)/", "<br/>", $csscode);
 
 
-$subject = 'Заявка на комплектующие для сборки патронов';
+    $subject = 'Заявка на комплектующие для сборки патронов';
 
-$message = '
+    $message = '
 	<html>
 		<head>
-			<title>Заявка на орехи</title>
+			<title>Заявка на комплектующие для сборки патронов</title>
 			<style>
 		     td, th{
 		      border: 1px solid #d4d4d4;
