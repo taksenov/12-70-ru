@@ -258,6 +258,9 @@
                 msgBox = $('.msg');
                 msgBox.html(''); // очищаем блок сообщений с сервера
 
+            console.log('Присваиваем переменные!');
+
+
             $.each(app.order.goods, function(index, val) {
                 if(val.amount !== 0){
                 goods.push({
