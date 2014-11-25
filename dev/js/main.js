@@ -42,6 +42,9 @@
         fillTemplate: function (sourceId, data){
             var source   = $(sourceId).html(),
                 template = Handlebars.compile(source);
+
+            console.log(template);
+
             return(template(data));
         },
 
